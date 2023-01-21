@@ -4,20 +4,18 @@ class Solution {
             return new int[0][0];
         
         int[][] result = new int[m][n];
-        int i = 0 , j = 0;
-        int ans = 0;
-        while(i<m){
-            result[i][j] = original[ans+i];
+        int a = 0 , b = 0;
+        
+            for(int i = 0 ; i < original.length; i ++ ){
+            result[a][b] = original[i];
             
-            if(j == n - 1)
+            if(b == n - 1)
             {
-                
-                i++;
-                j = 0;
+                a++;
+                b = 0;
             }
             else{
-                ans++;
-                j++;
+               b++;
             }
             
         }
