@@ -6,14 +6,14 @@ class Solution {
         
         
         for(int i = 0 ; i < boxTypes.length ; i++){
-            if(boxTypes[i][0]<=truckSize){
-                truckSize -= boxTypes[i][0];
-                result +=boxTypes[i][0]*boxTypes[i][1];
-            }
-            else{
-                result += truckSize*boxTypes[i][1];
+            int max = Math.min(boxTypes[i][0],truckSize);
+            
+                result +=max*boxTypes[i][1];
+                
+            truckSize -= max ;
+            if(truckSize <= 0)
                 break;
-            }
+           
         }
         
         return result;
