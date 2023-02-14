@@ -2,8 +2,6 @@ class Solution {
     public int minOperations(int[] nums) {
         int n = nums.length ;
         int count = 0;
-        if(n == 1)
-            return 0;
         
             for(int i = 1 ; i < n ; i++){
                 System.out.println(nums[i]+" "+nums[i-1]);
