@@ -3,7 +3,7 @@ class Solution {
         String[] morseTable = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
         
         
-        Map<String,Integer> hm = new HashMap<>();
+        HashSet<String> set=new HashSet<>();
         
         for(String s : words){
             char[] wordsChar = s.toCharArray();
@@ -13,10 +13,10 @@ class Solution {
                 morseWord.append(morseTable[charToMorse]);
             }
             
-            hm.put(morseWord.toString(),hm.getOrDefault(morseWord.toString(),1) + 1);
+            set.add(morseWord.toString());
             
         }
         
-        return hm.size();
+        return set.size();
     }
 }
