@@ -9,16 +9,12 @@ class RecentCounter {
     
     public int ping(int t) {
         queuePings.add(t);
-        int firstElemQueue = queuePings.peek() ;
         
-        
-        while(t - firstElemQueue > 3000){
+        while(t - queuePings.peek() > 3000){
             queuePings.remove();
-            firstElemQueue = queuePings.peek() ;
+            
         }
       
-
-        
         return queuePings.size();
     }
 }
