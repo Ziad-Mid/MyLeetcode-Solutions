@@ -5,9 +5,7 @@ class Solution {
         int currentSearchable = 0 ;
         
         while(i < t.length() && currentSearchable< s.length() ){
-            Character cT = t.charAt(i);
-            Character cS = s.charAt(currentSearchable);
-            if(cT.equals(cS)){
+            if(t.charAt(i) == s.charAt(currentSearchable)){
                 currentSearchable++;
             }
             i++;
