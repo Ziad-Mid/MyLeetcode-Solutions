@@ -7,17 +7,17 @@ class Solution {
         
         Arrays.sort(nums);
         
+        
+        int latestNumberSeen = 0;
         for(int i = 0 ; i < length ; i ++){
-            if(nums[i]==0)
+            if(nums[i] == 0)
                 continue;
             else{
-                count++;
-                int x = nums[i];
-                
-                for(int j = i ; j < length ; j++){
-                    System.out.println(nums[j]+ "  " +x);
-                    
-                    nums[j] -= x;
+                if(nums[i] == latestNumberSeen)
+                    continue;
+                else{
+                    latestNumberSeen = nums[i];
+                    count++;
                 }
             }
                 
